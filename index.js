@@ -1,4 +1,4 @@
-const terryIpsum = new GenerateNewText();
+const TerryIpsum = new GenerateNewText();
 
 function GenerateNewText(){
   this.single = [
@@ -57,4 +57,4 @@ GenerateNewText.prototype.getAllParagraphs = function(paragraphs = 2){
 
 }
 
-console.log(terryIpsum.getParagraph(2));
+export default TerryIpsum;
