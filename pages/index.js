@@ -53,12 +53,12 @@ class App extends React.Component {
         <section>
           <button onClick={this.sentenceClick}>Generate New Sentence</button>
           <div>
-            <button onClick={this.paragraphClick}>Get paragraphs</button>
             <input name="numberOfSentences" type="text" pattern="[0-9]*" onChange={this.handleInputChange} placeholder="Number of Sentences "/>
+            <button onClick={this.paragraphClick}>Get paragraphs</button>
           </div>
           <div>
-          <button onClick={this.multiParagraphClick}>Get Multiple Paragraphs</button>
             <input name="numberOfParagraphs" type="text" pattern="[0-9]*" onChange={this.handleParagraphChange} placeholder="Number of Sentences "/>
+          <button onClick={this.multiParagraphClick}>Get Multiple Paragraphs</button>
         </div>
         </section>
         <div>
