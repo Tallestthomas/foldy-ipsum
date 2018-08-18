@@ -1,0 +1,86 @@
+@font-face{
+  font-family: 'rick-morty';
+  src: url('/static/rick-morty/rick-morty.woff2') format('woff2'),
+  url('/static/rick-morty/rick-morty.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'calligraphr';
+  src: url('/static/rick-morty/calligraphr.woff2')
+  format('woff2'),
+  url('/static/rick-morty/calligraphr.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  padding: 1em calc(50% - 360px);
+}
+
+h1,
+h2 {
+  font-family: 'rick-morty', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1.header{
+  font-size: 5rem;
+  text-align: center;
+  color: #00b0c7;
+  text-shadow:
+		-3px -3px 2px #83c789,
+		3px -3px 2px #83c789,
+		-3px 3px 2px #83c789,
+		3px 3px 2px #83c789;
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: 'calligraphr', Arial, Helvetica, sans-serif;
+}
+
+button,
+input{
+  color: #00b0c7;
+  font-size: 1rem;
+  font-family: 'calligraphr';
+  background-color: white;
+  border: 1px solid #83c789; 
+  border-radius: 5px;
+  display: block;
+  padding: 0.4rem 1rem;
+  max-height: 2rem;
+}
+
+div > button {
+  width: 100%;
+}
+
+button:not(:first-of-type){
+  margin-left: 0rem !important;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section > div {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+img {
+  position: fixed;
+  left: -30%;
+  top: 0;
+  transform: rotate(90deg) translateY(-50%) scale(0.8);
+  z-index: -1;
+}

@@ -54,7 +54,11 @@ GenerateNewText.prototype.getParagraph = function(sentences = 5) {
 }
 
 GenerateNewText.prototype.getAllParagraphs = function(paragraphs = 2){
-
+  const results = [];
+  for(let i = 0; i < paragraphs; i++){
+    results.push(this.getParagraph());
+  }
+  return results;
 }
 
 export default TerryIpsum;
