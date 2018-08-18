@@ -20,7 +20,12 @@ html {
 }
 
 body {
-  padding: 1em calc(50% - 360px);
+  padding: 0 calc(50% - 360px) 0;
+  position: relative;
+  margin: 0;
+  @media screen and (max-width: 425px){
+    padding: 1rem;
+  }
 }
 
 h1,
@@ -40,6 +45,7 @@ h1.header{
 }
 
 p {
+  line-height: 1.2;
   font-size: 1.5rem;
   font-family: 'calligraphr', Arial, Helvetica, sans-serif;
 }
@@ -54,7 +60,7 @@ input{
   border-radius: 5px;
   display: block;
   padding: 0.4rem 1rem;
-  max-height: 2rem;
+  max-height: 3rem;
 }
 
 div > button {
@@ -69,6 +75,10 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 425px){
+    flex-flow: column;
+    width: 100%;
+  }
 }
 
 section > div {
@@ -78,21 +88,7 @@ section > div {
 }
 
 img {
-  position: fixed;
-  left: 0;
-  top: 0;
-  transform: rotate(90deg)  scale(0.8);
-  z-index: -1;
-
-  @media screen and (max-width: 1024px){
-    top: -10%;
-    left: -20%;
-    transform: rotate(90deg) scale(0.5);
-  }
-
-  @media screen and (max-width: 844px){
-    left: -30%;
-    top: -20%;
-    transform: rotate(90deg) scale(0.4);
-  }
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
 }

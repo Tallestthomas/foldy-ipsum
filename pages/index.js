@@ -1,6 +1,9 @@
 import React from 'react';
 import TerryIpsum from '../index';
 import '../styles/style.scss';
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-82050157-2');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends React.Component {
   constructor(){
@@ -47,8 +50,8 @@ class App extends React.Component {
   render(){
     return(
       <div>
-        <img src="/static/terryfolds.png" alt="Grab my terry fold" />
         <h1 className="header">Foldy Ipsum</h1>
+        <img src="/static/terryfolds.png" alt="Grab my terry fold" />
         <p>A random text generator based off of that one song that Morty put on the radio randomly for like 20 seconds. You son of a bitch.</p>
         <section>
           <button onClick={this.sentenceClick}>Generate New Sentence</button>
