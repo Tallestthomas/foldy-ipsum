@@ -3,7 +3,6 @@ import TerryIpsum from '../index';
 import '../styles/style.scss';
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-82050157-2');
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends React.Component {
   constructor(){
@@ -13,6 +12,10 @@ class App extends React.Component {
       numberOfSentences: 5,
       numberOfParagraphs: 2
     }
+  }
+
+  componentDidMount() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   sentenceClick = event => {
@@ -60,9 +63,9 @@ class App extends React.Component {
             <button onClick={this.paragraphClick}>Get paragraphs</button>
           </div>
           <div>
-            <input name="numberOfParagraphs" type="text" pattern="[0-9]*" onChange={this.handleParagraphChange} placeholder="Number of Sentences "/>
-          <button onClick={this.multiParagraphClick}>Get Multiple Paragraphs</button>
-        </div>
+            <input name="numberOfParagraphs" type="text" pattern="[0-9]*" onChange={this.handleParagraphChange} placeholder="Number of Paragraphs"/>
+            <button onClick={this.multiParagraphClick}>Get Multiple Paragraphs</button>
+          </div>
         </section>
         <div>
           { this.state.text.map( (text, index) => <p key={index}>{text}</p> ) }
